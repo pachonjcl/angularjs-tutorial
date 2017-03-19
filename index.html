@@ -1,46 +1,140 @@
 <!DOCTYPE html>
-<html ng-app="pruebaApp">
-<head>
+<html ng-app="tutorialApp">
+  <head>
     <title></title>
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="lib/ui-bootstrap-csp.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ui-bootstrap-csp.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 
-    <script type="text/javascript" src="lib/angular.min.js"></script>
-    <script type="text/javascript" src="lib/angular-animate.min.js"></script>
-    <script type="text/javascript" src="lib/angular-touch.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-animate.min.js"></script>
+    <script type="text/javascript" src="js/angular-touch.min.js"></script>
 
-    <script type="text/javascript" src="lib/ui-bootstrap.min.js"></script>
-    <script type="text/javascript" src="lib/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="js/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/ui-bootstrap-tpls.min.js"></script>
 
     <script type="text/javascript">
-        var app = angular.module('pruebaApp', ['ui.bootstrap']);
-        app.controller('PruebaCtrl', function($scope) {
-            $scope.holaMundo = 'Angular Hola Mundo';
-            $scope.nombre = 'Juan';
-            $scope.apellido = 'Perez';
-              $scope.alerts = [
-    { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
-    { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
-  ];
-
-  $scope.addAlert = function() {
-    $scope.alerts.push({msg: 'Another alert!'});
-  };
-
-  $scope.closeAlert = function(index) {
-    $scope.alerts.splice(index, 1);
-  };
-        });
+      var app = angular.module('tutorialApp', ['ui.bootstrap']);
+      app.controller('TutorialCtrl', function($scope) {
+        $scope.tutoriales = [
+          {
+            titulo: 'Introduccion',
+            descripcion: '',
+            src: '',
+            home: ''
+          },
+          {
+            titulo: 'Scope',
+            descripcion: '',
+            src: '',
+            home: ''
+          }
+        ];
+      });
     </script>
-</head>
-<body ng-controller="PruebaCtrl">
-  <script type="text/ng-template" id="alert.html">
-    <div ng-transclude></div>
-  </script>
-
-  <div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>
-  <div uib-alert template-url="alert.html" style="background-color:#fa39c3;color:white">A happy alert!</div>
-  <button type="button" class='btn btn-default' ng-click="addAlert()">Add Alert</button>
-
-</body>
+  </head>
+  <body ng-controller="TutorialCtrl">
+    <header class="navbar navbar-fixed-top navbar-default">
+      <div class="navbar-inner">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="http://angular-ui.github.io/">
+              Angular Tutorial
+            </a>
+          </div>
+          <!-- <div class="container"> -->
+            <!-- <div class="container"> -->
+              <!-- <div class="dropdown"></div> -->
+              <!-- <div class="navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <li>
+                    <a href="#tutoriales">Tutoriales</a>
+                  </li>
+                  <li>
+                    <a href="#ide-plugins">IDE Plugins</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/pachonjcl/angular-js-tutorial"><i class="fa fa-lg fa-github"></i> GitHub</a>
+                  </li>
+                </ul>
+              </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+        </div>
+      </div>
+    </header>
+    <div>
+      <header class="jumbotron" id="overview">
+        <div class="container">
+          <div class="col-sm-3 logo"></div>
+          <div class="col-sm-7">
+            <h1>Angular Tutorial</h1>
+            <!-- <p>The companion suite(s) to the <a href="http://angularjs.org">AngularJS</a> framework.</p> -->
+          </div>
+        </div>
+        <div class="bs-docs-social">
+          <div class="container">
+            <ul class="bs-docs-social-buttons">
+              <!-- <li>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="pachonjcl">
+                  Tweet
+                </a>
+                <script>
+                  !function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (!d.getElementById(id)) {
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = "//platform.twitter.com/widgets.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }
+                  }(document, "script", "twitter-wjs");
+                </script>
+              </li>
+              <li>
+                <div class="g-plusone" data-size="medium"></div>
+                <script type="text/javascript">
+                  (function() {
+                    var po = document.createElement('script');
+                    po.type = 'text/javascript';
+                    po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(po, s);
+                  })();
+                </script>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <section id="tutoriales">
+          <h1 class="page-header">Tutoriales</h1>
+          <p class="text-muted">
+            <input class="form-control" autofocus="autofocus" style="max-width: 15em; display: inline-block;" ng-model="textoBuscador" placeholder="buscar...">
+              {{(tutoriales| filter:textoBuscador).length}} tutoriales encontrados
+          </p>
+          <div class="list-group">
+            <div ng-repeat="tutorial in tutoriales| filter:textoBuscador" href="{{tutorial.src}}" class="list-group-item">
+              <p class="pull-right">
+                <a href="{{tutorial.home}}" title="Home / Demo page" ng-if="tutorial.home">
+                  <i class="fa fa-3x fa-home"></i>
+                </a>
+                <a href="{{tutorial.src}}" title="Code">
+                  <i class="fa fa-3x fa-github"></i>
+                </a>
+              </p>
+              <h4 class="list-group-item-heading">
+                {{tutorial.titulo}}
+              </h4>
+              <p class="list-group-item-text text-muted">
+                {{tutorial.descripcion}}
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
 </html>

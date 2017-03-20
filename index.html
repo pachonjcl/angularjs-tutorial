@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="css/ui-bootstrap-csp.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="js/angular-animate.min.js"></script>
     <script type="text/javascript" src="js/angular-touch.min.js"></script>
@@ -13,32 +15,14 @@
     <script type="text/javascript" src="js/ui-bootstrap.min.js"></script>
     <script type="text/javascript" src="js/ui-bootstrap-tpls.min.js"></script>
 
-    <script type="text/javascript">
-      var app = angular.module('tutorialApp', ['ui.bootstrap']);
-      app.controller('TutorialCtrl', function($scope) {
-        $scope.tutoriales = [
-          {
-            titulo: 'Introduccion',
-            descripcion: '',
-            src: '',
-            home: ''
-          },
-          {
-            titulo: 'Scope',
-            descripcion: '',
-            src: '',
-            home: ''
-          }
-        ];
-      });
-    </script>
+    <script type="text/javascript" src="js/app.js"></script>
   </head>
   <body ng-controller="TutorialCtrl">
     <header class="navbar navbar-fixed-top navbar-default">
       <div class="navbar-inner">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="http://angular-ui.github.io/">
+            <a class="navbar-brand" href="http://pachonjcl.github.io/">
               Angular Tutorial
             </a>
           </div>
@@ -66,7 +50,7 @@
     <div>
       <header class="jumbotron" id="overview">
         <div class="container">
-          <div class="col-sm-3 logo"></div>
+          <!-- <div class="col-sm-3 logo"></div> -->
           <div class="col-sm-7">
             <h1>Angular Tutorial</h1>
             <!-- <p>The companion suite(s) to the <a href="http://angularjs.org">AngularJS</a> framework.</p> -->

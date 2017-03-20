@@ -10,7 +10,7 @@ app.controller('TutorialCtrl', ['$scope', function($scope) {
       titulo: 'Introduccion',
       descripcion: 'Introduccion a los Frameworks MVC, NodeJS, AngularJS, Doble enlace de datos, SPA, Componentes web, pruebas.',
       src: '',
-      home: ''
+      home: 'https://htmlpreview.github.io/?https://github.com/pachonjcl/angular-js-tutorial/master/index.html'
     },
     {
       titulo: 'Directivas Angular',

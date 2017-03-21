@@ -31,6 +31,12 @@ app.controller('TutorialCtrl', ['$scope', function($scope) {
       home: ''
     },
     {
+      titulo: 'Depuracion',
+      descripcion: 'Herramienta de desarrollador, puntos de quiebre, inspeccion de elementos',
+      src: '',
+      home: ''
+    },
+    {
       titulo: 'Manipulacion del DOM',
       descripcion: 'Jqlite, selectors, effectos, eventos',
       src: '',

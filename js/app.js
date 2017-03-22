@@ -45,7 +45,6 @@ app.component('principal', {
                   </li>
                   <li>
                     <a href="https://github.com/pachonjcl/angular-js-tutorial"><i class="fa fa-lg fa-github"></i> GitHub</a>
-                    <>
                   </li>
                 </ul>
               </div>

@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/app.css">
 
     <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="js/angular-animate.min.js"></script>
     <script type="text/javascript" src="js/angular-touch.min.js"></script>
 
@@ -17,8 +18,12 @@
 
     <script type="text/javascript" src="js/app.js"></script>
   </head>
-  <body ng-controller="TutorialCtrl">
-    <header class="navbar navbar-fixed-top navbar-default">
+  <body>
+    <ui-view></ui-view>
+  </body>
+
+   <!-- <body ng-controller="TutorialCtrl">
+     <header class="navbar navbar-fixed-top navbar-default">
       <div class="navbar-inner">
         <div class="container">
           <div class="navbar-header">
@@ -36,6 +41,7 @@
                   </li>
                   <li>
                     <a href="https://github.com/pachonjcl/angular-js-tutorial"><i class="fa fa-lg fa-github"></i> GitHub</a>
+                    <>
                   </li>
                 </ul>
               </div>
@@ -47,7 +53,6 @@
     <div>
       <header class="jumbotron" id="overview">
         <div class="container">
-          <!-- <div class="col-sm-3 logo"></div> -->
           <div class="col-sm-7">
             <h1>Angular Tutorial</h1>
           </div>
@@ -92,6 +97,6 @@
           </div>
         </section>
       </div>
-    </div>
-  </body>
+    </div> 
+  </body> -->
 </html>

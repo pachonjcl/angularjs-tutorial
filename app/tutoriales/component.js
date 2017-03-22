@@ -33,13 +33,10 @@ app.component('tutoriales', {
               {{(tutoriales| filter:textoBuscador).length}} tutoriales encontrados
           </p>
           <div class="list-group">
-            <div ng-repeat="tutorial in $ctrl.tutoriales | filter:textoBuscador" href="{{tutorial.src}}" class="list-group-item"
+            <div ng-repeat="tutorial in $ctrl.tutoriales | filter:textoBuscador" class="list-group-item">
               <p class="pull-right">
-                <a href="{{tutorial.home}}" title="Home / Demo page" ng-if="tutorial.home">
+                <a ui-sref="{{tutorial.home}}" title="Pagina del Tutorial" ng-if="tutorial.home">
                   <i class="fa fa-3x fa-home"></i>
-                </a>
-                <a href="{{tutorial.src}}" title="Code">
-                  <i class="fa fa-3x fa-github"></i>
                 </a>
               </p>
               <h4 class="list-group-item-heading">
@@ -54,3 +51,9 @@ app.component('tutoriales', {
       </div>
 `
 })
+
+/*
+<a href="{{tutorial.src}}" title="Code">
+  <i[ class="fa fa-3x fa-github"></i>
+</a>]
+*/

@@ -11,6 +11,15 @@ app.component('introduccion', {
           <h1>Introduccion</h1>
         </div>
       </div>
+    <div>
+      <div hljs no-escape>
+        &lt;html ng-app="myApp"&gt;
+          &lt;body ng-init="hello = 'Hello World'"&gt;
+            {{hello}}
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </div>
+    </div>
     </header>
 `
 })

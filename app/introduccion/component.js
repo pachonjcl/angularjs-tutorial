@@ -2,7 +2,6 @@
 
 app.component('introduccion', {
   controller: function(IntroduccionService) {
-    // console.log(':O');
     this.ejemplos = IntroduccionService.getEjemplos();
   },
   template: `
@@ -13,8 +12,8 @@ app.component('introduccion', {
         </div>
       </div>
     <div ng-repeat="ejemplo in $ctrl.ejemplos">
-      <div hljs source="ejemplo">
-        
+      <h2> {{ejemplo.nombre}} </h2>
+      <div hljs hljs-include="ejemplo.url">
       </div>
     </div>
     </header>

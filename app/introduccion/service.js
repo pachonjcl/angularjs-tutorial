@@ -2,18 +2,12 @@
 
 app.service('IntroduccionService', function() {
   this.getEjemplos = function(){
-    return [`
-      <html ng-app="myApp">
-        <body ng-init="hello = 'Hello World'">
-          {{hello}}
-        </body>
-      </html>`,
-      `
-      <html ng-app="yourApp">
-        <body ng-init="hello = 'Hello World'">
-          {{hello}}
-        </body>
-      </html>`
-      ];
+    return [{
+      'nombre': 'Ejemplo1',
+      'url': 'app/introduccion/ejemplos/ejemplo1.html'
+    }, {
+      'nombre': 'Ejemplo2',
+      'url': 'app/introduccion/ejemplos/ejemplo2.html'
+    }];
   }
 });

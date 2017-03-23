@@ -1,8 +1,9 @@
 'use strict';
 
 app.component('introduccion', {
-  controller: function() {
-
+  controller: function(IntroduccionService) {
+    // console.log(':O');
+    this.ejemplos = IntroduccionService.getEjemplos();
   },
   template: `
     <header class="jumbotron" id="overview">
@@ -11,13 +12,9 @@ app.component('introduccion', {
           <h1>Introduccion</h1>
         </div>
       </div>
-    <div>
-      <div hljs no-escape>
-        &lt;html ng-app="myApp"&gt;
-          &lt;body ng-init="hello = 'Hello World'"&gt;
-            {{hello}}
-          &lt;/body&gt;
-        &lt;/html&gt;
+    <div ng-repeat="ejemplo in $ctrl.ejemplos">
+      <div hljs source="ejemplo">
+        
       </div>
     </div>
     </header>

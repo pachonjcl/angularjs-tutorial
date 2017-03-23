@@ -5,8 +5,9 @@
     </div>
   </div>
   <uib-tabset>
-    <uib-tab index="0" heading="Teoria">Teoria</uib-tab>
-
+    <uib-tab index="0" heading="Teoria">
+  
+    </uib-tab>
     <uib-tab index="1" heading="Ejemplos">
       <div ng-repeat="ejemplo in $ctrl.ejemplos">
         <h3> {{ejemplo.nombre}} </h3>
@@ -14,7 +15,8 @@
         <div ng-include="ejemplo.comentario"></div>
         <div hljs hljs-include="ejemplo.url">
         </div>
-        <a ng-href="{{ejemplo.url}}" download>Descargar</a>
+        <button type="button" class="btn" ng-href="{{ejemplo.url}}" download>Descargar</button>
+        <a class="btn" ng-href="{{'https://cdn.rawgit.com/pachonjcl/pachonjcl.github.io/master/' + ejemplo.url}}">Previsualizacion</a>
       </div>
     </uib-tab>
   </uib-tabset>

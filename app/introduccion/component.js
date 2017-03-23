@@ -5,4 +5,4 @@ app.component('introduccion', {
     this.ejemplos = IntroduccionService.getEjemplos();
   },
   templateUrl: 'app/introduccion/introduccion.html'
-})
+});

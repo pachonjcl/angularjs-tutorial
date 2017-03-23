@@ -4,11 +4,18 @@
       <h1>Introduccion</h1>
     </div>
   </div>
-  <div ng-repeat="ejemplo in $ctrl.ejemplos">
-    <h2> {{ejemplo.nombre}} </h2>
-    <h3> {{ejemplo.comentario}} </h3>
-    <div hljs hljs-include="ejemplo.url">
-    </div>
-    <a ng-href="{{ejemplo.url}}" download>Descargar</a>
-  </div>
+  <uib-tabset>
+    <uib-tab index="0" heading="Teoria">Teoria</uib-tab>
+
+    <uib-tab index="1" heading="Ejemplos">
+      <div ng-repeat="ejemplo in $ctrl.ejemplos">
+        <h3> {{ejemplo.nombre}} </h3>
+        <br>
+        <div ng-include="ejemplo.comentario"></div>
+        <div hljs hljs-include="ejemplo.url">
+        </div>
+        <a ng-href="{{ejemplo.url}}" download>Descargar</a>
+      </div>
+    </uib-tab>
+  </uib-tabset>
 </header>

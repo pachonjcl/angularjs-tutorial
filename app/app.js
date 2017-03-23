@@ -11,7 +11,6 @@ var app = angular.module('tutorialApp',
 app.config(function($urlServiceProvider, hljsServiceProvider) {
   $urlServiceProvider.rules.otherwise({ state: 'tutoriales' });
   hljsServiceProvider.setOptions({
-    // replace tab with 4 spaces
-    tabReplace: '    '
+    tabReplace: '  '
   });
 });

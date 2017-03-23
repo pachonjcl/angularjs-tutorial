@@ -13,6 +13,7 @@ app.component('introduccion', {
       </div>
     <div ng-repeat="ejemplo in $ctrl.ejemplos">
       <h2> {{ejemplo.nombre}} </h2>
+      <h3> {{ejemplo.comentario}} </h3>
       <div hljs hljs-include="ejemplo.url">
       </div>
     </div>

@@ -16,7 +16,8 @@ app.component('introduccion', {
       <h3> {{ejemplo.comentario}} </h3>
       <div hljs hljs-include="ejemplo.url">
       </div>
+      <a ng-href="{{ejemplo.url}}" download>Descargar</a>
     </div>
     </header>
-`
+  `
 })

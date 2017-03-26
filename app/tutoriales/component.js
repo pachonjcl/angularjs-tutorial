@@ -8,9 +8,3 @@ app.component('tutoriales', {
   templateUrl: 'app/tutoriales/tutoriales.html' 
 
 })
-
-/*
-<a href="{{tutorial.src}}" title="Code">
-  <i[ class="fa fa-3x fa-github"></i>
-</a>]
-*/

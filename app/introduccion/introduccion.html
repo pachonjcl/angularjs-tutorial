@@ -4,174 +4,174 @@
       <h1>Introduccion</h1>
     </div>
   </div>
-  <uib-tabset>
-    <uib-tab index="0" heading="Teoria">
-      <div>
-        <div>
-          <h2>AngularJS es:</h2>
-          <ul>
-            <li>
-              Un framework estructural para aplicaciones web dinamicas (MVC).
-            </li>
-            <li>
-              Permite crear aplicaciones de una sola pagina.
-            </li>
-            <li>
-              Permite utilizar elementos HTML y tus propios componentes.
-            </li>
-            <li>
-              Permite una facil conexion entre el controlador y la vista.
-            </li>
-            <li>
-              Utiliza la inyeccion de dependencias.
-            </li>
-            <li>
-              Es amigable al momento de hacer las pruebas.
-            </li>
-            <li>
-              Es bueno para el prototipado rapido.
-            </li>
-            <li>
-              Es utilizado en mas de medio millon de paginas como Youtube y Upwork.
-            </li>
-            <li>
-              Tiene un mayor mercado que otros frameworks para desarrollo web.
-            </li>
-            <li>
-              Es bueno para el prototipado rápido.
-              </li>
-            <li>
-              AngularJS es utilizado en mas de medio millon de paginas actualmente como Youtube, Netflix y Upwork :).
-            </li>
-            <li>
-              Tiene mayor mercado que otros frameworks para desarrollo web.
-            </li>
-            <li>
-              Funciona bastante bien con NodeJS.
-              </li>
-          </ul>
-        </div>
-        <section>
-          <h2>
-            Framework Estructural
-          </h2>
-          <div>
-            <h3> AngularJS MVC </h3>
-            <p>
-              MVC es un patrón de diseño de software para crear interfaces de usuario.
-              MVC divide una aplicación en tres componentes interconectados para separar la representación interna de la información de la forma que es presentada al usuario.
-              En aplicaciones web su principal objetivo es separar la modificación del DOM de la lógica de la aplicación. Esto ayuda a la reutilización del código y al desarrollo en paralelo.
-              En el patrón MVC los diferentes aspectos de de la aplicación son separados en componentes para separar las responsabilidades.
-              Modelo: Contiene los datos y la lógica.
-              Vista: Disposición visual y la presentación.
-              Controlador: Conecta a la vista con el controlador.
-            </p>
-            <img ng-src="img/tutorial1/mvc.png">
-          </div>
-        </section>
-        <section>
-          <h2>
-            Aplicaciones de una sola pagina
-          </h2>
-          <div>
-            <h3> Modelo Tradicional </h3>
-            <p>
-              En el modelo tradicional, todas las transacciones con el servidor se cargaban mediante el recargado completo de la pagina.
-            </p>
-            <img ng-src="img/tutorial1/beforeajax.png">
-            <h3> SPA </h3>
-            <p>
-              Las principales ventajas son:
-              La aplicación es más fluida y responsiva ya que no tiene que hacer el recargado de la página web en cada llamada.
-              Al mandar la información de la aplicación a través de JSON crea una separación entre la vista (HTML) y lógica de la aplicación.
-            </p>
-            <img ng-src="img/tutorial1/withajax.png">
-          </div>
-        </section>
-        <section>
-          <h2>
-            AngularJS extiende HTML
-          </h2>
-          <div>
-            <h3> Nuevos elementos en HTML </h3>
-            <p>
-              En el pasado los diseñadores web no podian crear un código HTML entendible, porque estaban limitados por el diccionario que tenían.
-              Incluso con HTML5 las restricciones continuan.
-              AngularJS permite la compatibilidad de etiquetas HTML entre navegadores sin la necesidad de depender de HTML5.
-            </p>
-            <h3> Componentes Web </h3>
-            <p>
-              Los componentes web consisten de diferentes tecnologías separadas.
-              Puedes pensar en los componentes web como piezas de interfaces de usuario reutilizables que son creados con tecnología web libre.
-              Son parte del navegador y no necesitan librerías externas simplemente importando el componente en el HTML.
-            </p>
-          </div>
-        </section>
-        <section>
-          <h2>
-            Facil conexion entre vista y controlador
-          </h2>
-          <div>
-            <h3> Con AngularJS solo se necesita unas cuantas líneas de código para la conexión.</h3>
-            <img ng-src="img/tutorial1/viewcontroller.png">
-            <img ng-src="img/tutorial1/formulario.png">
-            <img ng-src="img/tutorial1/mustache.png">
-          </div>
-        </section>
-        <section>
-          <h2>
-            Injeccion de dependencias
-          </h2>
-          <div>
-            <p>
-              La inyección de dependencia es un patrón de diseño de software en el cual a un objeto se le es dado su dependencia, en vez de que el objeto la cree.
-              Ayuda a la modularización de la aplicación.
-              Ayuda al desarrollo independiente entre la dependencia y el dependiente mientras éstos mantengan un contrato conocido.
-              Ayuda a la aplicación a ser más fácil para las pruebas.
-            </p>
-            <img ng-src="img/tutorial1/dependencyinjection.png">
-          </div>
-        </section>
-        <section>
-          <h2>
-            Pruebas
-          </h2>
-          <div>
-            <h3>KARMA</h3>
-            <p>
-              En Google creemos en pruebas. En el equipo de AngularJS, es mucho peor - somo super locos acerca de las pruebas. Cada feature del framework está diseñado con las pruebas en mente.
-              Vojta Jina.
-            </p>
-            <img ng-src="img/tutorial1/bugs.png">
-          </div>
-        </section>
-        <section>
-          <h2>
-            NPM
-          </h2>
-          <div>
-            <h3>Node Package Manager</h3>
-            <ul>
-              <li>Repositorio para los proyectos código abierto de NodeJS.</li>
-              <li>Es una utilitario de línea de comandos para interactuar con el repositorio.</li>
-            </ul>
-            <p>
-              Bower, Yeo, Grunt, Gulp, Yarn, Webpack, etc.
-            </p>
-          </div>
-        </section>
-      </div>
-    </uib-tab>
-    <uib-tab index="1" heading="Ejemplos">
-      <div ng-repeat="ejemplo in $ctrl.ejemplos">
-        <h3> {{ejemplo.nombre}} </h3>
-        <br>
-        <div ng-include="ejemplo.comentario"></div>
-        <div hljs hljs-include="ejemplo.url">
-        </div>
-        <a class="btn btn-primary" ng-href="{{ejemplo.url}}" download>Descargar</a>
-        <a class="btn btn-primary" ng-href="{{'https://cdn.rawgit.com/pachonjcl/pachonjcl.github.io/master/' + ejemplo.url}}">Previsualizacion</a>
-      </div>
-    </uib-tab>
-  </uib-tabset>
 </header>
+<uib-tabset>
+  <uib-tab index="0" heading="Teoria">
+    <div>
+      <div>
+        <h2>AngularJS es:</h2>
+        <ul>
+          <li>
+            Un framework estructural para aplicaciones web dinamicas (MVC).
+          </li>
+          <li>
+            Permite crear aplicaciones de una sola pagina.
+          </li>
+          <li>
+            Permite utilizar elementos HTML y tus propios componentes.
+          </li>
+          <li>
+            Permite una facil conexion entre el controlador y la vista.
+          </li>
+          <li>
+            Utiliza la inyeccion de dependencias.
+          </li>
+          <li>
+            Es amigable al momento de hacer las pruebas.
+          </li>
+          <li>
+            Es bueno para el prototipado rapido.
+          </li>
+          <li>
+            Es utilizado en mas de medio millon de paginas como Youtube y Upwork.
+          </li>
+          <li>
+            Tiene un mayor mercado que otros frameworks para desarrollo web.
+          </li>
+          <li>
+            Es bueno para el prototipado rápido.
+            </li>
+          <li>
+            AngularJS es utilizado en mas de medio millon de paginas actualmente como Youtube, Netflix y Upwork :).
+          </li>
+          <li>
+            Tiene mayor mercado que otros frameworks para desarrollo web.
+          </li>
+          <li>
+            Funciona bastante bien con NodeJS.
+            </li>
+        </ul>
+      </div>
+      <section>
+        <h2>
+          Framework Estructural
+        </h2>
+        <div>
+          <h3> AngularJS MVC </h3>
+          <p>
+            MVC es un patrón de diseño de software para crear interfaces de usuario.
+            MVC divide una aplicación en tres componentes interconectados para separar la representación interna de la información de la forma que es presentada al usuario.
+            En aplicaciones web su principal objetivo es separar la modificación del DOM de la lógica de la aplicación. Esto ayuda a la reutilización del código y al desarrollo en paralelo.
+            En el patrón MVC los diferentes aspectos de de la aplicación son separados en componentes para separar las responsabilidades.
+            Modelo: Contiene los datos y la lógica.
+            Vista: Disposición visual y la presentación.
+            Controlador: Conecta a la vista con el controlador.
+          </p>
+          <img ng-src="img/tutorial1/mvc.png">
+        </div>
+      </section>
+      <section>
+        <h2>
+          Aplicaciones de una sola pagina
+        </h2>
+        <div>
+          <h3> Modelo Tradicional </h3>
+          <p>
+            En el modelo tradicional, todas las transacciones con el servidor se cargaban mediante el recargado completo de la pagina.
+          </p>
+          <img ng-src="img/tutorial1/beforeajax.png">
+          <h3> SPA </h3>
+          <p>
+            Las principales ventajas son:
+            La aplicación es más fluida y responsiva ya que no tiene que hacer el recargado de la página web en cada llamada.
+            Al mandar la información de la aplicación a través de JSON crea una separación entre la vista (HTML) y lógica de la aplicación.
+          </p>
+          <img ng-src="img/tutorial1/withajax.png">
+        </div>
+      </section>
+      <section>
+        <h2>
+          AngularJS extiende HTML
+        </h2>
+        <div>
+          <h3> Nuevos elementos en HTML </h3>
+          <p>
+            En el pasado los diseñadores web no podian crear un código HTML entendible, porque estaban limitados por el diccionario que tenían.
+            Incluso con HTML5 las restricciones continuan.
+            AngularJS permite la compatibilidad de etiquetas HTML entre navegadores sin la necesidad de depender de HTML5.
+          </p>
+          <h3> Componentes Web </h3>
+          <p>
+            Los componentes web consisten de diferentes tecnologías separadas.
+            Puedes pensar en los componentes web como piezas de interfaces de usuario reutilizables que son creados con tecnología web libre.
+            Son parte del navegador y no necesitan librerías externas simplemente importando el componente en el HTML.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Facil conexion entre vista y controlador
+        </h2>
+        <div>
+          <h3> Con AngularJS solo se necesita unas cuantas líneas de código para la conexión.</h3>
+          <img ng-src="img/tutorial1/viewcontroller.png">
+          <img ng-src="img/tutorial1/formulario.png">
+          <img ng-src="img/tutorial1/mustache.png">
+        </div>
+      </section>
+      <section>
+        <h2>
+          Injeccion de dependencias
+        </h2>
+        <div>
+          <p>
+            La inyección de dependencia es un patrón de diseño de software en el cual a un objeto se le es dado su dependencia, en vez de que el objeto la cree.
+            Ayuda a la modularización de la aplicación.
+            Ayuda al desarrollo independiente entre la dependencia y el dependiente mientras éstos mantengan un contrato conocido.
+            Ayuda a la aplicación a ser más fácil para las pruebas.
+          </p>
+          <img ng-src="img/tutorial1/dependencyinjection.png">
+        </div>
+      </section>
+      <section>
+        <h2>
+          Pruebas
+        </h2>
+        <div>
+          <h3>KARMA</h3>
+          <p>
+            En Google creemos en pruebas. En el equipo de AngularJS, es mucho peor - somo super locos acerca de las pruebas. Cada feature del framework está diseñado con las pruebas en mente.
+            Vojta Jina.
+          </p>
+          <img ng-src="img/tutorial1/bugs.png">
+        </div>
+      </section>
+      <section>
+        <h2>
+          NPM
+        </h2>
+        <div>
+          <h3>Node Package Manager</h3>
+          <ul>
+            <li>Repositorio para los proyectos código abierto de NodeJS.</li>
+            <li>Es una utilitario de línea de comandos para interactuar con el repositorio.</li>
+          </ul>
+          <p>
+            Bower, Yeo, Grunt, Gulp, Yarn, Webpack, etc.
+          </p>
+        </div>
+      </section>
+    </div>
+  </uib-tab>
+  <uib-tab index="1" heading="Ejemplos">
+    <div ng-repeat="ejemplo in $ctrl.ejemplos">
+      <h3> {{ejemplo.nombre}} </h3>
+      <br>
+      <div ng-include="ejemplo.comentario"></div>
+      <div hljs hljs-include="ejemplo.url">
+      </div>
+      <a class="btn btn-primary" ng-href="{{ejemplo.url}}" download>Descargar</a>
+      <a class="btn btn-primary" ng-href="{{'https://cdn.rawgit.com/pachonjcl/pachonjcl.github.io/master/' + ejemplo.url}}">Previsualizacion</a>
+    </div>
+  </uib-tab>
+</uib-tabset>

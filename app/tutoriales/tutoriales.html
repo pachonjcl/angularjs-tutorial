@@ -3,26 +3,28 @@
     <div class="col-sm-7">
       <h1>Angular Tutorial</h1>
     </div>
-  </div>
-  <div class="bs-docs-social">
-    <div class="container">
-      <ul class="bs-docs-social-buttons">
-        <li>
-          <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false" data-hashtags="pachonjcl">
-            Tweet
-          </a>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </li>
-      </ul>
-    </div>
+    <!-- 
+    TODO: fix twitter share
+    <div class="bs-docs-social">
+      <div class="container">
+        <ul class="bs-docs-social-buttons">
+          <li>
+            <button href="https://twitter.com/share" class="twitter-share-button" data-show-count="false" data-hashtags="pachonjcl">
+              Tweet
+            </button>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </li>
+        </ul>
+      </div>
+    </div> -->
   </div>
 </header>
 <div class="container">
   <section id="tutoriales">
-    <h1 class="page-header">Tutoriales</h1>
+    <!-- <h1 class="page-header">Tutoriales</h1> -->
     <p class="text-muted">
-      <input class="form-control" autofocus="autofocus" style="max-width: 15em; display: inline-block;" ng-model="textoBuscador" placeholder="Buscar...">
-        {{(tutoriales| filter:textoBuscador).length}} tutoriales encontrados
+      <input class="form-control" autofocus="autofocus" style="max-width: 10em; display: inline-block;" ng-model="textoBuscador" placeholder="Buscar...">
+      {{($ctrl.tutoriales| filter:textoBuscador).length}} tutoriales
     </p>
     <div class="list-group">
       <div ng-repeat="tutorial in $ctrl.tutoriales | filter:textoBuscador" class="list-group-item">

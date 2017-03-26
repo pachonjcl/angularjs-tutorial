@@ -12,3 +12,12 @@ img {
     object-fit: contain;
     width: 100%;
 }
+
+section.success {
+  background: #18BC9C;
+  color: white;
+}
+
+uib-tabset {
+    font-size: 15px;
+}

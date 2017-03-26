@@ -28,3 +28,12 @@ body {
     padding-top: 28px;
     padding-bottom: 18px;
 }
+
+.jumbotron ul li {
+    font-size: 21px;
+}
+
+img {
+    object-fit: contain;
+    width: 100%;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "pachonjcl.github.io",
+  "version": "1.0.0",
+  "description": "AngularJS tutorial",
+  "main": "app/app.js",
+  "scripts": {
+    "run": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pachonjcl/pachonjcl.github.io.git"
+  },
+  "author": "pachonjcl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pachonjcl/pachonjcl.github.io/issues"
+  },
+  "homepage": "https://github.com/pachonjcl/pachonjcl.github.io#readme"
+}
